@@ -21,3 +21,11 @@ NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
 NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+
+Planetscale DATABASE_URL needs to be put in ENV file
+
+
+## Tech Stack
+Authentication  | Clerk
+Database        | Planet Scale (Primsa)
+Front-end       | React, TypeScript, Tailwind 
