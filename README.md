@@ -1,16 +1,7 @@
 ## Getting Started
-
 First, run the development server:
-
-```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -29,3 +20,11 @@ Planetscale DATABASE_URL needs to be put in ENV file
 Authentication  | Clerk
 Database        | Planet Scale (Primsa)
 Front-end       | React, TypeScript, Tailwind 
+Images          | Cloudinary
+
+## Terminal Functions
+
+npx prisma studio -- to check SQL Database 
+node scripts/seed.ts -- to run script that updates categories 
+
+After changes to Prisma Schema you need to use 'npx prisma generate' and 'npx prisma db push'
