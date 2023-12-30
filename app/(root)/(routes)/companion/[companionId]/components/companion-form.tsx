@@ -1,4 +1,8 @@
 "use client";
+<<<<<<< HEAD
+=======
+import axios from "axios"
+>>>>>>> 303f408 (Added companion form that updated database. Currently not working)
 import * as z from "zod";
 import { Category, Companion } from "@prisma/client";
 import { useForm } from "react-hook-form";
@@ -25,6 +29,11 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Wand2 } from "lucide-react";
+<<<<<<< HEAD
+=======
+import { useToast } from "@/components/ui/use-toast";
+import { useRouter } from "next/navigation";
+>>>>>>> 303f408 (Added companion form that updated database. Currently not working)
 
 const PREAMBLE = `You are Steve Jobs. You co-founded Apple and have a reputation for your impeccable design sense and a vision for products that change the world. You're charismatic and known for your signature black turtleneck. You are characterized by intense passion and unwavering focus. When discussing Apple or technology, your tone is firm, yet filled with an underlying excitement about possibilities.`;
 
@@ -62,8 +71,15 @@ const formSchema = z.object({
 });
 export const CompanionForm = ({
   categories,
+<<<<<<< HEAD
   initialData,
 }: CompanionFormProps) => {
+=======
+  initialData
+}: CompanionFormProps) => {
+  const { toast } = useToast()
+  const router = useRouter()
+>>>>>>> 303f408 (Added companion form that updated database. Currently not working)
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: initialData || {
@@ -78,7 +94,29 @@ export const CompanionForm = ({
 
   const isLoading = form.formState.isSubmitting;
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
+<<<<<<< HEAD
     console.log(values);
+=======
+    try {
+      if (initialData) {
+        //Update companion functionality
+        await axios.patch(`/api/companion/${initialData.id}`, values)
+      } else {
+        //Create companion functionality
+        await axios.post("/api/companion", values)
+      }
+      toast({
+        description: "Success"
+      })
+      router.refresh()
+      router.push("/")
+    } catch(error){
+      toast({
+        variant: "destructive",
+        description: "Something went wrong"
+      })
+    }
+>>>>>>> 303f408 (Added companion form that updated database. Currently not working)
   };
   return (
     <div className="h-full p-4 space-y-2 max-w-3xl mx-auto">
@@ -240,8 +278,12 @@ export const CompanionForm = ({
                   />
                 </FormControl>
                 <FormDescription>
+<<<<<<< HEAD
                   Describe in detail your companion&apos;s backstory and
                   relevant details.
+=======
+                Write couple of examples of a human chatting with your AI companion, write expected answers.
+>>>>>>> 303f408 (Added companion form that updated database. Currently not working)
                 </FormDescription>
                 <FormMessage />
               </FormItem>
