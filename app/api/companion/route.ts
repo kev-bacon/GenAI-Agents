@@ -8,7 +8,16 @@ export async function POST(req: Request) {
         const user = await currentUser()
         const { src, name, description, instructions, seed, categoryId} = body 
 
+        // console.log("User object:", user);
+        // if (user) {
+        //     console.log("User ID:", user.id);
+        //     console.log("User First Name:", user.firstName);
+        // } else {
+        //     console.log("No user object returned");
+        // }
+
         if(!user || !user.id || !user.firstName) {
+            // console.log(user, user?.id, user?.firstName)
             return new NextResponse("Unauthorized", { status: 401})
         }
 
@@ -17,7 +26,7 @@ export async function POST(req: Request) {
         }
 
         //TODO: Check for subscription
-        const companion = await prismadb.companion.create( {
+        const companion = await prismadb.companion.create({
             data: {
                 categoryId,
                 userId: user.id,

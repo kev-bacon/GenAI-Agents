@@ -10,6 +10,13 @@ export async function PATCH(
         const user = await currentUser()
         const { src, name, description, instructions, seed, categoryId} = body 
 
+        // console.log("User object:", user);
+        // if (user) {
+        //     console.log("User ID:", user.id);
+        //     console.log("User First Name:", user.firstName);
+        // } else {
+        //     console.log("No user object returned");
+        // }
         if(!params.companionId) {
             return new NextResponse("Companion ID is required", {status:400})
         }

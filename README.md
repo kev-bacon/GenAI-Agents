@@ -1,3 +1,6 @@
+## CURRENT BUGS
+Sign in with Github doesn't allow creation of new agents --> This issue is because Github doesn't have an associated first + last_name and therefore is missing an attribute when adding to PrismaDB. **Need to fix 
+
 ## Getting Started
 First, run the development server:
 npm run dev
