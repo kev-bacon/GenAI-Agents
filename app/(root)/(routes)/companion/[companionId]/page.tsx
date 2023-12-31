@@ -24,12 +24,6 @@ const CompanionIdPage = async({
         categories = {categories} 
         /> 
     )
-
-    return (
-        <div>
-            Hello Companion ID! 
-        </div>
-    )
 }
 
 export default CompanionIdPage 
