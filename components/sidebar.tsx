@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Home, Plus, Settings } from "lucide-react";
+import { Home, MessageSquareText, Plus, Settings, Speech, SpeechIcon } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 
 export const Sidebar = () => {
@@ -21,9 +21,9 @@ export const Sidebar = () => {
       pro: true,
     },
     {
-      icon: Settings,
-      href: "/settings",
-      label: "Settings",
+      icon: MessageSquareText,
+      href: "/chat",
+      label: "Chat",
       pro: false,
     },
   ];

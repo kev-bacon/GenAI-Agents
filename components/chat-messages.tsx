@@ -40,11 +40,11 @@ export const ChatMessages = ({
             content={`Hello, I am ${companion.name}, ${companion.description}`}
             /> 
             {messages.map((message) => (
-                <ChatMessage 
+                <ChatMessage   
                     role={message.role}
                     key={message.content}
                     content={message.content}
-                    src={message.src}/>
+                    src={companion.src}/>
             ))}
             {isLoading && (
                 <ChatMessage 
