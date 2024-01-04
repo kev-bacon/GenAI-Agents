@@ -24,7 +24,7 @@ export const Navbar = () => {
                 <h1 className={cn(
                     "hidden md:block text-xl md:text-3xl text-primary",
                     font.className)}>
-                    Kev's AI Agents
+                    Kevs AI Agents
                 </h1>
             </Link>
             </div>
