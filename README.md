@@ -11,17 +11,25 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Setup Notes
 .env file with Clerk next.js API keys 
 and the following: 
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
 NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
-
-Planetscale DATABASE_URL needs to be put in ENV file
-
+DATABASE_URL=
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
+PINECONE_INDEX=
+PINECONE_ENVIRONMENT=
+PINECONE_API_KEY=
+UPSTASH_REDIS_REST_URL=
+UPSTASH_REDIS_REST_TOKEN=
+OPENAI_API_KEY=
 
 ## Tech Stack
 Authentication  | Clerk
-Database        | Planet Scale (Primsa)
+Relational DB   | Planet Scale (Primsa)
+VectorDB        | Pinecone and Redis
 Front-end       | React, TypeScript, Tailwind 
 Images          | Cloudinary
 
