@@ -25,11 +25,12 @@ PINECONE_API_KEY=
 UPSTASH_REDIS_REST_URL=
 UPSTASH_REDIS_REST_TOKEN=
 OPENAI_API_KEY=
+REPLICATE_API_TOKEN=
 
 ## Tech Stack
 Authentication  | Clerk
-Relational DB   | Planet Scale (Primsa)
-VectorDB        | Pinecone and Redis
+Relational DB   | Planet Scale (Primsa) - used to display chat history
+VectorDB        | Pinecone and Redis - used for RAG 
 Front-end       | React, TypeScript, Tailwind 
 Images          | Cloudinary
 
